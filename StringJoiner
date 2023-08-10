@@ -1,0 +1,25 @@
+import java.util.StringJoiner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+
+        StringJoiner names = new StringJoiner(",");
+        names.add("ali");
+        names.add("aslam");
+        System.out.println(names);
+
+
+        System.out.println(".......................");
+
+        StringJoiner joinNames = new StringJoiner(",","(","}");   // passing comma(,) and square-brackets as delimiter
+
+        // Adding values to StringJoiner
+        joinNames.add("Rahul");
+        joinNames.add("Raju");
+        joinNames.add("Peter");
+        joinNames.add("Raheem");
+
+        System.out.println(joinNames);
+    }
+}
