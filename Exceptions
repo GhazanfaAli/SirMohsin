@@ -1,0 +1,54 @@
+import java.util.*;
+/*
+compile exception or checked
+throws keyword used to declare the exception i.e. indicates the caller
+method that given an exception occurs so we have to handle either using
+try and catch
+
+
+runtime exception or unchecked
+in Java throw keyword is used to throw an exception explicitly in the code,
+ inside the function or the block of code.
+
+ We are allowed to throw only one exception at a time
+  i.e. we cannot
+ throw multiple exceptions.
+
+ We are allowed to throw only one exception at a time
+  i.e. we cannot throw multiple exceptions.
+
+ */
+
+class ErrorsAndException {
+    public static double area(int r) throws Exception{
+        if (r<0){
+            throw new Exception("number is negative");
+        }
+        double result = Math.PI * r * r;
+        return result;
+    }
+
+
+    public static void main(String[] args) {
+        try {
+            int number = Integer.parseInt("23sw14");
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException occurred: " + e.getMessage());
+        } finally {
+
+            System.out.println("finally has been executed");
+        }
+
+
+        try{
+//
+            double ar = area(-6);
+            System.out.println(ar);
+        }
+        catch(Exception e){
+            System.out.println("Exception");
+        }
+
+
+    }
+}
